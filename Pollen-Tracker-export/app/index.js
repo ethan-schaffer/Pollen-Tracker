@@ -8,7 +8,6 @@ import * as messaging from "messaging";
 // Update the clock every second
 clock.granularity = "seconds";
 
-
 // Get a handle on the <text> element
 const myLabel = document.getElementById("myLabel");
 
