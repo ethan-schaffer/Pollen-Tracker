@@ -3,9 +3,9 @@
 }
 
 #myLabel {
-  font-size: 12;
+  font-size: 8;
   font-family: System-Bold;
-  text-length: 100;
+  text-length: 200;
   text-anchor: middle;
   x: 50%;
   y: 50%+40;

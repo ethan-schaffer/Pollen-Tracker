@@ -1,7 +1,7 @@
 {
   "fitbit": {
     "appUUID": "a4f48af5-4db3-4281-b442-8676e9dd7419",
-    "appType": "app",
+    "appType": "clockface",
     "appDisplayName": "Pollen Tracker",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ff9800",
