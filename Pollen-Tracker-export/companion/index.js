@@ -17,7 +17,9 @@ messaging.peerSocket.onmessage = function(evt) {
 
 function sendPollenData() {
   let weather = new Weather();
-  weather.getJson().then(function(entries) {
+  weather.getZipcode().then(function(zipcode){
+    console.log(zipcode)
+    weather.getJson(zipcode).then(function(entries) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Limit results to the number of tiles available in firmware
       messaging.peerSocket.send(entries);
@@ -25,4 +27,8 @@ function sendPollenData() {
   }).catch(function (e) {
     console.log("error"); console.log(e)
   });
+  }).catch(function (e) {
+    console.log("error"); console.log(e)
+  });
+  
 }
