@@ -1,0 +1,21 @@
+{
+  "fitbit": {
+    "appUUID": "a4f48af5-4db3-4281-b442-8676e9dd7419",
+    "appType": "app",
+    "appDisplayName": "Pollen Tracker",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ff9800",
+    "requestedPermissions": [
+      "access_internet",
+      "access_location"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Pollen Tracker"
+      }
+    }
+  }
+}
