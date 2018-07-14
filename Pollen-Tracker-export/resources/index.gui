@@ -1,3 +1,9 @@
-<svg class="background">
-  <text id="myLabel" />
+<svg viewport-fill="fb-cyan">
+  <text id="location" font-size="20" x="10" y="22">Location: </text>
+  <text id="myClock" x="280" y="24"
+      fill="black" font-size="28" font-family="System-Regular"
+      text-anchor="middle" text-length="20">00:00:00</text>
+  <text id= "pCount" font-size="23" x="10" y="90">Pollen Index: </text>
+  <text id="pType" fill="black" font-size="26" x="5" y="220">Pollen Type:</text>
+  <circle id="circle" cx="310" cy="210" r="20" fill="yellow" />
 </svg>
