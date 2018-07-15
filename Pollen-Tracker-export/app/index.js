@@ -7,6 +7,7 @@ import clock from "clock";
 import { geolocation } from "geolocation";
 //geolocation.getCurrentPosition(locationSuccess, locationError);
 
+
 function locationSuccess(position) {
     console.log("Latitude: " + position.coords.latitude,
                 "Longitude: " + position.coords.longitude);
@@ -21,6 +22,11 @@ clock.granularity = "seconds";
 
 // Get a handle on the <text> element
 const myLabel = document.getElementById("location");
+const circle = document.getElementById("circle");
+
+function setColor(color) {
+  circle.style.fill = color
+}
 
 messaging.peerSocket.onmessage = function(evt) {
   var cityName = JSON.stringify(evt['data'][0].City);
@@ -30,10 +36,16 @@ messaging.peerSocket.onmessage = function(evt) {
   document.getElementById("pCount").text = "Pollen Index: "+pollenIndex;
   var pollenType = JSON.stringify(evt['data'][0].PredominantPollen);
   document.getElementById("pType").text = "Pollen Type: "+pollenType.substring(1,pollenType.length-1); 
+  var index = parseInt(pollenIndex, 10);
+  console.log(index)
+  if(index < 4.9) {
+    setColor("green");
+  } else if(index < 7.3) {
+    setColor("yellow");
+  } else {
+    setColor("red");
+  }
 }
-
-
-
 let myClock = document.getElementById("myClock");
 
 clock.granularity = 'seconds'; // seconds, minutes, hours
