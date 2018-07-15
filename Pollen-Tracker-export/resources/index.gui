@@ -1,18 +1,18 @@
 <svg viewport-fill="fb-black">
 
-  <text id="location" fill= "white"font-size="27" font-weight="bold" text-decoration="underline" x="10" y="50">Location: </text>
-  <text id="myClock" x="299" y="28"
-      fill="white" font-size="23" font-family="System-Regular" 
+  <text id="location" fill= "white"font-size="23" font-weight="bold" text-decoration="underline" x="10" y="80">Location: </text>
+  <text id="myClock" x="259" y="28"
+      fill="white" font-size="40" font-family="System-Regular" 
       text-anchor="middle" text-length="20">00:00:00</text>
-  <text id="pType" fill="white" font-size="23" x="10" y="80">Pollen Type:</text>
+  <text id="pType" fill="white" font-size="23" x="230" y="80">Pollen Type:</text>
   <text id= "pCount" fill="white" font-size="23" x="10" y="110">Pollen Index: </text>
   <circle id="circle" fill="white" cx="175" cy="103" r="15" fill="black" />
   <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="black"  />
   <rect id = "two day" width="20" height="60"x="50" y="130" fill="black" />
   <rect id = "three day" width="20" height="50"x="80" y="130" fill="black" />
   <text id = "forecast" x = "20" y = "140"
-        fill="white" font-size="23" font-family="System-Regular" 
-      text-anchor="left" text-length="1">Forecast</text>
+        fill="white" font-size="23" text-decoration="underline" font-family="System-Regular" 
+        >Forecast</text>
   <text id = "day one" x = "30" y = "240"
         fill="white" font-size="23" font-family="System-Regular" 
       text-anchor="middle" text-length="1"></text>
