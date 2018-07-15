@@ -6,10 +6,19 @@
       text-anchor="middle" text-length="20">00:00:00</text>
   <text id="pType" fill="white" font-size="23" x="10" y="80">Pollen Type:</text>
   <text id= "pCount" fill="white" font-size="23" x="10" y="110">Pollen Index: </text>
-  <circle id="circle" fill="white" cx="175" cy="103" r="15" fill="yellow" />
-  <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="green"  />
-   <rect id = "two day" width="20" height="60"x="50" y="130" fill="red" />
-   <rect id = "three day" width="20" height="50"x="80" y="130" fill="blue" />
+  <circle id="circle" fill="white" cx="175" cy="103" r="15" fill="black" />
+  <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="black"  />
+  <rect id = "two day" width="20" height="60"x="50" y="130" fill="black" />
+  <rect id = "three day" width="20" height="50"x="80" y="130" fill="black" />
+  <text id = "day one" x = "30" y = "220"
+        fill="white" font-size="23" font-family="System-Regular" 
+      text-anchor="middle" text-length="1"></text>
+  <text id = "day two" x = "60" y = "220"
+        fill="white" font-size="23" font-family="System-Regular" 
+      text-anchor="middle" text-length="1"></text>
+  <text id = "day three" x = "90" y = "220"
+        fill="white" font-size="23" font-family="System-Regular" 
+      text-anchor="middle" text-length="1"></text>
 
 
 </svg>
