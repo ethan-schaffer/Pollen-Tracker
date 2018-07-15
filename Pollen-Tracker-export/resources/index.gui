@@ -1,10 +1,10 @@
 <svg viewport-fill="fb-black">
 
   <text id="location" fill= "white"font-size="23" font-weight="bold" text-decoration="underline" x="10" y="80">Location: </text>
-  <text id="myClock" x="259" y="28"
-      fill="white" font-size="40" font-family="System-Regular" 
+  <text id="myClock" x="250" y="35"
+      fill="white" font-size="50" font-family="System-Regular" 
       text-anchor="middle" text-length="20">00:00:00</text>
-  <text id="pType" fill="white" font-size="23" x="230" y="80">Pollen Type:</text>
+  <text id="pType" fill="white" font-size="23" x="210" y="110">Pollen Type:</text>
   <text id= "pCount" fill="white" font-size="23" x="10" y="110">Pollen Index: </text>
   <circle id="circle" fill="white" cx="175" cy="103" r="15" fill="black" />
   <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="black"  />
