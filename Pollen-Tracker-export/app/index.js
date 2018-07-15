@@ -63,19 +63,37 @@ messaging.peerSocket.onmessage = function(evt) {
   var twoDayNumber = evt['data'][0].TwoDays
   var threeDayNumber = evt['data'][0].ThreeDays
   
-  var maxNumber = Math.max(oneDayNumber, oneDayNumber, oneDayNumber)
-  
+  var maxNumber = Math.max(oneDayNumber, twoDayNumber, threeDayNumber)
+  var minNumber = Math.min(oneDayNumber, twoDayNumber, threeDayNumber)
   oneDay.height = maxHeight * oneDayNumber / maxNumber
   twoDay.height = maxHeight * twoDayNumber / maxNumber
   threeDay.height = maxHeight * threeDayNumber / maxNumber
   
-  oneDay.y = 200 - oneDay.height
-  twoDay.y = 200 - twoDay.height
-  threeDay.y = 200 - threeDay.height
+  oneDay.y = 220 - oneDay.height
+  twoDay.y = 220 - twoDay.height
+  threeDay.y = 220 - threeDay.height
  
-  oneDay.style.fill = "white";
-  twoDay.style.fill = "white";
-  threeDay.style.fill = "white";
+  if(oneDayNumber == maxNumber){
+    setColor(oneDay, "red");
+  } else if(oneDayNumber == minNumber){
+    setColor(oneDay, "green")
+  } else {
+    setColor(oneDay, "yellow")
+  }
+  if(twoDayNumber == maxNumber){
+    setColor(twoDay, "red");
+  } else if(twoDayNumber == minNumber){
+    setColor(twoDay, "green")
+  } else {
+    setColor(twoDay, "yellow")
+  }
+  if(threeDayNumber == maxNumber){
+    setColor(threeDay, "red");
+  } else if(threeDayNumber == minNumber){
+    setColor(threeDay, "green")
+  } else {
+    setColor(threeDay, "yellow")
+  }
 }
 let myClock = document.getElementById("myClock");
 

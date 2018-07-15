@@ -10,13 +10,16 @@
   <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="black"  />
   <rect id = "two day" width="20" height="60"x="50" y="130" fill="black" />
   <rect id = "three day" width="20" height="50"x="80" y="130" fill="black" />
-  <text id = "day one" x = "30" y = "220"
+  <text id = "forecast" x = "20" y = "140"
+        fill="white" font-size="23" font-family="System-Regular" 
+      text-anchor="left" text-length="1">Forecast</text>
+  <text id = "day one" x = "30" y = "240"
         fill="white" font-size="23" font-family="System-Regular" 
       text-anchor="middle" text-length="1"></text>
-  <text id = "day two" x = "60" y = "220"
+  <text id = "day two" x = "60" y = "240"
         fill="white" font-size="23" font-family="System-Regular" 
       text-anchor="middle" text-length="1"></text>
-  <text id = "day three" x = "90" y = "220"
+  <text id = "day three" x = "90" y = "240"
         fill="white" font-size="23" font-family="System-Regular" 
       text-anchor="middle" text-length="1"></text>
 
