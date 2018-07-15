@@ -3,15 +3,15 @@
   <text id="location" fill= "white"font-size="23" font-weight="bold" text-decoration="underline" x="10" y="80"></text>
   <text id="myClock" x="245" y="45"
       fill="white" font-size="50" font-family="System-Regular" 
-      text-anchor="middle" text-length="20">00:00:00</text>
-  <text id="day of week" x = "75" y = "25" fill= "white"font-size="23" font-weight="bold" text-anchor="middle"></text>
-  <text id="day of month" x = "70" y = "50" fill= "white" font-size="20" font-weight="bold" text-anchor="middle"></text>
-  <text id="pType" fill="white" font-size="23" x="210" y="110">Pollen Type:</text>
-  <text id="pType0" text-length = "20" fill="white" font-size="20" x="220" y="135"></text>
-  <text id="pType1" text-length = "20" fill="white" font-size="20" x="220" y="155"></text>
-  <text id="pType2" text-length = "20" fill="white" font-size="20" x="220" y="175"></text>
+      text-anchor="middle" text-length="20"></text>
+  <text id="day of week" x = "75" y = "25" fill= "red" font-size="23" font-weight="bold" text-anchor="middle" text-length = "50"></text>
+  <text id="day of month" x = "70" y = "50" fill= "white" font-size="20" font-weight="bold" text-anchor="middle" text-length = "50"></text>
+  <text id="pType" fill="white" font-size="23" x="210" y="140">Pollen Type:</text>
+  <text id="pType0" text-length = "20" fill="white" font-size="20" x="220" y="165"></text>
+  <text id="pType1" text-length = "20" fill="white" font-size="20" x="220" y="185"></text>
+  <text id="pType2" text-length = "20" fill="white" font-size="20" x="220" y="205"></text>
   <text id= "pCount" fill="white" font-size="23" x="10" y="110">Pollen Index: </text>
-  <circle id="circle" fill="white" cx="175" cy="103" r="15" fill="black" />
+  <circle id="circle" fill="white" cx="170" cy="101" r="10" fill="black" />
   <rect id = "tomorrow" width="20" height="70" x="20" y="130" fill="black"  />
   <rect id = "two day" width="20" height="60"x="50" y="130" fill="black" />
   <rect id = "three day" width="20" height="50"x="80" y="130" fill="black" />

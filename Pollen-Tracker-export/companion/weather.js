@@ -47,8 +47,12 @@ Weather.prototype.getZipcode = function() {
       lat = position.coords.latitude
       lng = position.coords.longitude
 
-      lat = 47
-      lng = 9
+      var locations = [[47, 9, "Manchester Township, NJ"], 
+                       [30.2672, -97.7431, "Austin, TX"], 
+                       [40.7128, -74.0060, "New York City, NY"]]
+      var index = 1
+      lat = locations[index][0]
+      lng = locations[index][1]
 
       var url = "http://api.geonames.org/findNearbyPostalCodesJSON?lat="+lat+"&lng="+lng+"&username=ETHANSCHAFFER"
       
@@ -62,9 +66,10 @@ Weather.prototype.getZipcode = function() {
       }).then(function(json) {
         
         let zipcode = util.padToFive(json.postalCodes[0].postalCode)
-      
+        
         console.log("Got zipcode response from server:" + zipcode);
-
+        //zipcode = 78731
+        
         resolve(zipcode);
       }).catch(function (error) {
         reject(error);
