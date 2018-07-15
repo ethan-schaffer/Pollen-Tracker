@@ -1,9 +1,15 @@
-<svg viewport-fill="fb-cyan">
-  <text id="location" font-size="28" x="10" y="24">Location: </text>
-  <text id="myClock" x="280" y="24"
-      fill="black" font-size="28" font-family="System-Regular"
+<svg viewport-fill="fb-black">
+
+  <text id="location" fill= "white"font-size="27" font-weight="bold" text-decoration="underline" x="10" y="50">Location: </text>
+  <text id="myClock" x="299" y="28"
+      fill="white" font-size="23" font-family="System-Regular" 
       text-anchor="middle" text-length="20">00:00:00</text>
-  <text id="pType" fill="black" font-size="23" x="10" y="60">Pollen Type:</text>
-  <text id= "pCount" font-size="23" x="10" y="85">Pollen Index: </text>
-  <circle id="circle" cx="310" cy="210" r="20" fill="yellow" />
+  <text id="pType" fill="white" font-size="23" x="10" y="80">Pollen Type:</text>
+  <text id= "pCount" fill="white" font-size="23" x="10" y="110">Pollen Index: </text>
+  <circle id="circle" fill="white" cx="290" cy="175" r="50" fill="yellow" />
+  <rect width="20" height="70" x="20" y="130" fill="green"  />
+   <rect width="20" height="60"x="50" y="130" fill="red" />
+   <rect width="20" height="50"x="80" y="130" fill="blue" />
+
+
 </svg>
