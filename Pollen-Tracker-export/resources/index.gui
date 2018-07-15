@@ -1,11 +1,11 @@
 <svg viewport-fill="fb-black">
 
-  <text id="location" fill= "white"font-size="23" font-weight="bold" text-decoration="underline" x="10" y="80">Location: </text>
+  <text id="location" fill= "white"font-size="23" font-weight="bold" text-decoration="underline" x="10" y="80"></text>
   <text id="myClock" x="245" y="45"
       fill="white" font-size="50" font-family="System-Regular" 
       text-anchor="middle" text-length="20">00:00:00</text>
-  <text id="day of week" x = "75" y = "25" fill= "white"font-size="23" font-weight="bold" text-anchor="middle">Saturday,</text>
-  <text id="day of month" x = "70" y = "50" fill= "white" font-size="20" font-weight="bold" text-anchor="middle">December 12</text>
+  <text id="day of week" x = "75" y = "25" fill= "white"font-size="23" font-weight="bold" text-anchor="middle"></text>
+  <text id="day of month" x = "70" y = "50" fill= "white" font-size="20" font-weight="bold" text-anchor="middle"></text>
   <text id="pType" fill="white" font-size="23" x="210" y="110">Pollen Type:</text>
   <text id="pType0" text-length = "20" fill="white" font-size="20" x="220" y="135"></text>
   <text id="pType1" text-length = "20" fill="white" font-size="20" x="220" y="155"></text>

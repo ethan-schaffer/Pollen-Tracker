@@ -46,7 +46,13 @@ function setColorIndex(item, index){
 }
 
 messaging.peerSocket.onmessage = function(evt) {
-  document.getElementById("location").text = JSON.stringify(evt['data'][0].CityState).substring(1,JSON.stringify(evt['data'][0].CityState).length-1);
+  var stateName = JSON.stringify(evt['data'][0].State).toUpperCase();
+  var cityName = JSON.stringify(evt['data'][0].City);
+  var locationName = cityName + ", " + stateName;
+  locationName = locationName.split("\"").join("");
+  console.log(locationName);
+
+  document.getElementById("location").text = locationName;
   //console.log(JSON.stringify(evt['data']));
   var pollenIndex = JSON.stringify(evt['data'][0].Today);
   document.getElementById("pCount").text = "Pollen Index: "+pollenIndex;
