@@ -52,7 +52,23 @@ messaging.peerSocket.onmessage = function(evt) {
   var pollenIndex = JSON.stringify(evt['data'][0].Today);
   document.getElementById("pCount").text = "Pollen Index: "+pollenIndex;
   var pollenType = JSON.stringify(evt['data'][0].PredominantPollen);
-  document.getElementById("pType").text = "Pollen Type: "+pollenType.substring(1,pollenType.length-1); 
+  document.getElementById("pType").text = "Pollen Type: ";
+  var pollenTypes = pollenType.split("and ").join("")
+  .split("\"").join("")
+  .split(",").join("")
+  .split(" ")
+  if(pollenTypes.length > 1){
+    pollenTypes[pollenTypes.length-1] = pollenTypes[pollenTypes.length-1].split(".")[0]
+  }
+  console.log(pollenTypes)
+  var i;
+  for(i = 0; i < pollenTypes.length; i++) {
+    if(i >= 3){
+       continue;
+       }
+    const text = document.getElementById("pType"+i)
+    text.text = pollenTypes[i];
+  }
   var index = parseInt(pollenIndex, 10);
   console.log(index)
 
@@ -100,17 +116,26 @@ let myClock = document.getElementById("myClock");
 clock.granularity = 'seconds'; // seconds, minutes, hours
 
 function weekDay(day) {  
-  var days = ["S", "M", "T", "W", "T", "F", "S"]
-  return days[day]
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  return days[day % 7];
 }
 
+function getMonth(mon) {
+  var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+  return monthNames[mon % 12];
+}
+
+const dayOfWeek = document.getElementById("day of week");
+const dayOfMonth = document.getElementById("day of month");
 clock.ontick = function(evt) {
-  var day = evt.date.getDay()
-  console.log("day =" + day)
-  weekDayOne.text = weekDay(day)
-  weekDayTwo.text = weekDay(day+1)
-  weekDayThree.text = weekDay(day+2)
-  console.log(weekDayOne.text)
+  var day = evt.date.getDay();
+  var month = evt.date.getMonth();
+  weekDayOne.text = weekDay(day+1).substring(0,1);
+  weekDayTwo.text = weekDay(day+2).substring(0,1);
+  weekDayThree.text = weekDay(day+3).substring(0,1);
+  dayOfWeek.text = weekDay(day) + ",";
+  dayOfMonth.text = getMonth(month) + " " + evt.date.getDate();
   myClock.text = ("0" + evt.date.getHours()).slice(-2) + ":" +
                       ("0" + evt.date.getMinutes()).slice(-2) + ":" +
                       ("0" + evt.date.getSeconds()).slice(-2);
